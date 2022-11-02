@@ -184,6 +184,25 @@
       </dmn:rule>
     </dmn:decisionTable>
   </dmn:decision>
+  <dmn:decision id="_3C4E2E18-587C-4D5F-B639-D250145ED44D" name="Total Vacation Days">
+    <dmn:extensionElements/>
+    <dmn:variable id="_CECE6860-9CF7-4C68-94D7-F78B79D8EA9A" name="Total Vacation Days" typeRef="number"/>
+    <dmn:informationRequirement id="_99C042C1-774E-44CB-BCA6-5F2B0E30413B">
+      <dmn:requiredDecision href="#_EA75BC7C-B95E-4674-936F-023B919B8723"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_7E1786F9-29D6-48D7-9D03-95EABC8D3556">
+      <dmn:requiredDecision href="#_B1C29BA8-DD73-4B54-B3A4-C346AC39DEC8"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_DA15F1FE-1BD8-4E50-9553-2E9C78704B2A">
+      <dmn:requiredDecision href="#_C57D5F25-68B2-4EA6-996F-E3FEF0818120"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_33312DBD-17B8-46F0-94CD-C8A44E962F91">
+      <dmn:requiredDecision href="#_087767BD-0415-47C9-8BB6-4BBED01B2F8C"/>
+    </dmn:informationRequirement>
+    <dmn:literalExpression id="_BA4D8F17-D407-4BFA-8264-CBDE9C108910">
+      <dmn:text>Base Vacation Days + max(Extra Days Case 1, Extra Days Case 3) + Extra Days Case 2</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="_03DBFF66-A1E3-40D5-B90D-97B276CA7BCB" name="DRG">
       <di:extension>
@@ -212,6 +231,9 @@
             <kie:width>179</kie:width>
             <kie:width>208</kie:width>
           </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_BA4D8F17-D407-4BFA-8264-CBDE9C108910">
+            <kie:width>738</kie:width>
+          </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
       <dmndi:DMNShape id="dmnshape-drg-_06D3D137-A53D-4EDE-BA6F-56FBD0C0B66A" dmnElementRef="_06D3D137-A53D-4EDE-BA6F-56FBD0C0B66A" isCollapsed="false">
@@ -238,7 +260,7 @@
           <dmndi:StrokeColor red="0" green="0" blue="0"/>
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
-        <dc:Bounds x="610" y="296" width="100" height="50"/>
+        <dc:Bounds x="729" y="173" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-drg-_087767BD-0415-47C9-8BB6-4BBED01B2F8C" dmnElementRef="_087767BD-0415-47C9-8BB6-4BBED01B2F8C" isCollapsed="false">
@@ -268,6 +290,15 @@
         <dc:Bounds x="329" y="173" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_3C4E2E18-587C-4D5F-B639-D250145ED44D" dmnElementRef="_3C4E2E18-587C-4D5F-B639-D250145ED44D" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="211" green="9" blue="9"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="383" y="58" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
       <dmndi:DMNEdge id="dmnedge-drg-_844044AC-3891-4B8D-A5E2-358AF28108D7-AUTO-TARGET" dmnElementRef="_844044AC-3891-4B8D-A5E2-358AF28108D7">
         <di:waypoint x="209" y="321"/>
         <di:waypoint x="181" y="223"/>
@@ -291,6 +322,22 @@
       <dmndi:DMNEdge id="dmnedge-drg-_A2259EC8-7A1C-4675-ABD6-C2AD01139F6E" dmnElementRef="_A2259EC8-7A1C-4675-ABD6-C2AD01139F6E">
         <di:waypoint x="459" y="321"/>
         <di:waypoint x="379" y="223"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_99C042C1-774E-44CB-BCA6-5F2B0E30413B-AUTO-TARGET" dmnElementRef="_99C042C1-774E-44CB-BCA6-5F2B0E30413B">
+        <di:waypoint x="779" y="198"/>
+        <di:waypoint x="433" y="108"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_7E1786F9-29D6-48D7-9D03-95EABC8D3556-AUTO-TARGET" dmnElementRef="_7E1786F9-29D6-48D7-9D03-95EABC8D3556">
+        <di:waypoint x="579" y="198"/>
+        <di:waypoint x="433" y="108"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_DA15F1FE-1BD8-4E50-9553-2E9C78704B2A" dmnElementRef="_DA15F1FE-1BD8-4E50-9553-2E9C78704B2A">
+        <di:waypoint x="379" y="198"/>
+        <di:waypoint x="433" y="108"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_33312DBD-17B8-46F0-94CD-C8A44E962F91" dmnElementRef="_33312DBD-17B8-46F0-94CD-C8A44E962F91">
+        <di:waypoint x="181" y="198"/>
+        <di:waypoint x="433" y="108"/>
       </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
