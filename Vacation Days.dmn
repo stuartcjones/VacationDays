@@ -81,6 +81,52 @@
     <dmn:informationRequirement id="_89A647B4-FA02-443F-8D35-EB943462A898">
       <dmn:requiredInput href="#_9DFF99D5-99D1-4DCE-9464-89CCAE1DD2A6"/>
     </dmn:informationRequirement>
+    <dmn:decisionTable id="_9CA3521B-E93F-4542-B1A3-256C8FDE4FD9" hitPolicy="COLLECT" aggregation="MAX" preferredOrientation="Rule-as-Row">
+      <dmn:input id="_9279662F-55D9-41F8-88A7-C6C0B6D7177C">
+        <dmn:inputExpression id="_6CDFA98C-CD3D-4A0F-BC49-292671372C8C" typeRef="number">
+          <dmn:text>Age</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_52B9FF2A-9FEB-46CB-BF5F-FFC62EDE0E80">
+        <dmn:inputExpression id="_2357D8E9-EF81-4E9D-BFBE-023BB69659ED" typeRef="number">
+          <dmn:text>Years of Service</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output id="_C50A5116-3603-4D28-BD15-5F2AC16F6B65">
+        <dmn:defaultOutputEntry id="_E24247C4-70E4-4D57-B191-D3F36C54C646">
+          <dmn:text>0</dmn:text>
+        </dmn:defaultOutputEntry>
+      </dmn:output>
+      <dmn:annotation name="annotation-1"/>
+      <dmn:rule id="_34039E9F-2D0C-4573-B48C-0BF4C7D1CDB3">
+        <dmn:inputEntry id="_50CE4F15-E289-4648-A8FA-295743ECED03">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_E47A81C0-F63C-4ADF-8CBE-6B1B8300573F">
+          <dmn:text>[15..30]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_62151ED0-3CB6-4E99-89D0-DF09340D06DE">
+          <dmn:text>2</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_1253AB6C-213E-4C07-AEEC-217D36D58DC6">
+        <dmn:inputEntry id="_0F34136C-9370-4839-9EC6-9C6FC528341A">
+          <dmn:text>&gt;=45</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_7BD60C58-3F19-4EE1-8CE7-FEBD1D44106D">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_16DAA2CA-4C9C-47E8-9DF6-3898217999A5">
+          <dmn:text>2</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
   </dmn:decision>
   <dmn:decision id="_C57D5F25-68B2-4EA6-996F-E3FEF0818120" name="Extra Days Case 2">
     <dmn:extensionElements/>
@@ -91,6 +137,52 @@
     <dmn:informationRequirement id="_A2259EC8-7A1C-4675-ABD6-C2AD01139F6E">
       <dmn:requiredInput href="#_9DFF99D5-99D1-4DCE-9464-89CCAE1DD2A6"/>
     </dmn:informationRequirement>
+    <dmn:decisionTable id="_A9784E28-452C-42A5-8894-DE1542D37CA8" hitPolicy="COLLECT" aggregation="MAX" preferredOrientation="Rule-as-Row">
+      <dmn:input id="_7B71D2A8-B0BA-4A8C-A6D0-48705C0EED03">
+        <dmn:inputExpression id="_CFAD74E4-D8DB-4911-9977-E48B21FA8DCC" typeRef="number">
+          <dmn:text>Age</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_710AF81A-473C-44CE-B7CC-C9193A882E75">
+        <dmn:inputExpression id="_8B71B691-B1E7-4B22-A0A1-4274C9D10DFD" typeRef="number">
+          <dmn:text>Years of Service</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output id="_BE639066-26CB-475F-88CE-B0C6A114A8A5">
+        <dmn:defaultOutputEntry id="_3E999B11-B5AF-4946-901E-F3881A999558">
+          <dmn:text>0</dmn:text>
+        </dmn:defaultOutputEntry>
+      </dmn:output>
+      <dmn:annotation name="annotation-1"/>
+      <dmn:rule id="_3F699EB3-8122-47AD-92C4-E7B790903268">
+        <dmn:inputEntry id="_4A471590-FADB-444D-AA5A-FEE2D3B34194">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_806971A1-1211-467C-A245-14F162E76DA5">
+          <dmn:text>&gt;=30</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_E2EF9C65-EA01-487B-BB5F-11BDEB9E7C95">
+          <dmn:text>3</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_FD06624A-88DC-4E1C-A5F4-B81D73726B11">
+        <dmn:inputEntry id="_737C0892-89D0-4E65-B5C3-0082F4EA6B7D">
+          <dmn:text>&gt;=60</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_C966C8A1-4225-4574-A6F9-911D34200FBC">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_07555719-DBA3-4A4E-A95E-271B9CCB0B8E">
+          <dmn:text>3</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
   </dmn:decision>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="_03DBFF66-A1E3-40D5-B90D-97B276CA7BCB" name="DRG">
@@ -105,6 +197,20 @@
             <kie:width>163</kie:width>
             <kie:width>235</kie:width>
             <kie:width>294</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_9CA3521B-E93F-4542-B1A3-256C8FDE4FD9">
+            <kie:width>50</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_A9784E28-452C-42A5-8894-DE1542D37CA8">
+            <kie:width>50</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>150</kie:width>
+            <kie:width>179</kie:width>
+            <kie:width>208</kie:width>
           </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
