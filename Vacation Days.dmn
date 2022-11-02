@@ -9,10 +9,21 @@
     <dmn:extensionElements/>
     <dmn:variable id="_49AA5AB5-AB60-4E18-A9B7-8926E9FADF9E" name="Years of Service" typeRef="number"/>
   </dmn:inputData>
+  <dmn:decision id="_EA75BC7C-B95E-4674-936F-023B919B8723" name="Base Vacation Days">
+    <dmn:extensionElements/>
+    <dmn:variable id="_43B47A52-443F-4DDC-9B41-AF4369886639" name="Base Vacation Days" typeRef="number"/>
+    <dmn:literalExpression id="_C873F430-730E-4764-A7D8-1BE45723FAE0">
+      <dmn:text>22</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="_03DBFF66-A1E3-40D5-B90D-97B276CA7BCB" name="DRG">
       <di:extension>
-        <kie:ComponentsWidthsExtension/>
+        <kie:ComponentsWidthsExtension>
+          <kie:ComponentWidths dmnElementRef="_C873F430-730E-4764-A7D8-1BE45723FAE0">
+            <kie:width>300</kie:width>
+          </kie:ComponentWidths>
+        </kie:ComponentsWidthsExtension>
       </di:extension>
       <dmndi:DMNShape id="dmnshape-drg-_06D3D137-A53D-4EDE-BA6F-56FBD0C0B66A" dmnElementRef="_06D3D137-A53D-4EDE-BA6F-56FBD0C0B66A" isCollapsed="false">
         <dmndi:DMNStyle>
@@ -30,6 +41,15 @@
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
         <dc:Bounds x="409" y="296" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_EA75BC7C-B95E-4674-936F-023B919B8723" dmnElementRef="_EA75BC7C-B95E-4674-936F-023B919B8723" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="56" green="160" blue="19"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="692" y="210" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
     </dmndi:DMNDiagram>
